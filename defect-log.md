@@ -40,4 +40,4 @@ check whether it did.
 - Reprompts: 1
 - Defects: 4 — one model error, two spec gaps, one unrequested change
 - Caught by reading: 2 · by diff: 1 · with assistance: 1
-- AGENTS.md scope constraints respected: yes, apart from D4
+- AGENTS.md scope constraints respected: yes, apart from D4\
