@@ -29,7 +29,7 @@ The brief never specified error handling. Carried to Brief 02.
 Wrong argument count raises an unpacking error rather than a usage message.
 Brief never specified. Carried to Brief 02.
 
-**D4 · unrequested scope · assist · open**
+**D4 · unrequested scope · assist · reverted**
 The reprompt also changed the input `open()` call from `newline=""` to
 `newline="\n"`, which was not requested. Effect: files using bare `\r` line
 endings are no longer split into lines at all. Harmless in practice, but
