@@ -15,13 +15,25 @@ not by my judgment.
 Build only what the current brief asks for. Do not add flags, colored output,
 regular-expression support, or multi-file handling unless asked.
 
+If the brief does not say what should happen in some case, ask rather than
+choosing. Do not fill gaps with reasonable defaults.
+
 ## How to verify
-    grep <word> test.txt > real_grep.txt
-    python mygrep.py <word> test.txt > my_grep.txt
+Both files must pass. `test.txt` ends with a newline; `test_no_eol.txt`
+deliberately does not.
+
+    grep dagger test.txt > real_grep.txt
+    python mygrep.py dagger test.txt > my_grep.txt
     diff real_grep.txt my_grep.txt
 
-Done means `diff` prints nothing.
+    grep dagger test_no_eol.txt > real_grep.txt
+    python mygrep.py dagger test_no_eol.txt > my_grep.txt
+    diff real_grep.txt my_grep.txt
+
+Done means `diff` prints nothing for both.
 
 ## Before finishing
-State which rules above you followed, and flag anything you added that the
-brief did not ask for.
+- Run the verification commands above and paste their output. If you did not
+  run them, say so explicitly.
+- State which constraints above you followed.
+- Flag anything you added that the brief did not ask for.
