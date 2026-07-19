@@ -1,2 +1,5 @@
-real_grep.txt
-my_grep.txt
+__pycache__/
+*.pyc
+real*.txt
+my*.txt
+mine.txt

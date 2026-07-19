@@ -16,9 +16,9 @@ Build only what the current brief asks for. Do not add flags, colored output,
 regular-expression support, or multi-file handling unless asked.
 
 ## How to verify
-    grep <word> test.txt > real.txt
-    python mygrep.py <word> test.txt > mine.txt
-    diff real.txt mine.txt
+    grep <word> test.txt > real_grep.txt
+    python mygrep.py <word> test.txt > my_grep.txt
+    diff real_grep.txt my_grep.txt
 
 Done means `diff` prints nothing.
 

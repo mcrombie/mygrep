@@ -35,7 +35,6 @@ The reprompt also changed the input `open()` call from `newline=""` to
 endings are no longer split into lines at all. Harmless in practice, but
 unchosen. AGENTS.md instructed the agent to flag unrequested additions —
 check whether it did.
-Decision pending: revert, or keep and record why.
 
 ### Brief 01 summary
 - Reprompts: 1
