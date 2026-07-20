@@ -45,6 +45,12 @@ the brief as a historical record; binary and non-UTF-8 files moved to AGENTS.md
 as a standing constraint after confirming they raise `UnicodeDecodeError` in the
 read loop, which no `OSError` catch would reach.
 
+**D6 · record/reality mismatch · assist · fixed**
+D5 was marked fixed in the log before any of the three described changes were
+committed. No verification case would have caught this, since none exercises a
+permission-denied file. Fix: applied the changes and verified against the
+committed file rather than the local one.
+
 ### Brief 01 summary
 - Reprompts: 1
 - Defects: 4 — one model error, two spec gaps, one unrequested change
