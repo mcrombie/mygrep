@@ -22,6 +22,9 @@ def main() -> int:
     except FileNotFoundError:
         print(f"{program}: {filename}: No such file", file=sys.stderr)
         return 2
+    except OSError as exc:
+        print(f"{program}: {filename}: {exc.strerror}", file=sys.stderr)
+        return 2
 
     found_match = False
     with file:

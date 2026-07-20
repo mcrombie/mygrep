@@ -40,9 +40,10 @@ check whether it did.
 Goal promised "no Python tracebacks" while Out of scope limited work to five
 cases. A file that exists but cannot be read raised an uncaught exception.
 Agent followed scope over goal, which was the defensible reading.
-Fix: added `except OSError` on open; narrowed the goal to file-access errors;
-put binary/non-UTF-8 files explicitly out of scope after confirming they raise
-`UnicodeDecodeError` in the read loop, which no `OSError` catch would reach.
+Fix: added `except OSError` on open. Goal/scope contradiction left in place in
+the brief as a historical record; binary and non-UTF-8 files moved to AGENTS.md
+as a standing constraint after confirming they raise `UnicodeDecodeError` in the
+read loop, which no `OSError` catch would reach.
 
 ### Brief 01 summary
 - Reprompts: 1

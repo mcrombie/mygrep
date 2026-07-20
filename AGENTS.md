@@ -10,6 +10,8 @@ not by my judgment.
 - Single file: `mygrep.py`. Do not split into modules.
 - Open files with `encoding="utf-8"` explicitly.
 - Write `\n` line endings, not `\r\n`. This is a Windows machine.
+- Binary and non-UTF-8 files are out of scope. They raise `UnicodeDecodeError`
+  during reading; real grep exits 1 quietly. Deferred to a later brief.
 
 ## Scope
 Build only what the current brief asks for. Do not add flags, colored output,
