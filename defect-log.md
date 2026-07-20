@@ -36,8 +36,23 @@ endings are no longer split into lines at all. Harmless in practice, but
 unchosen. AGENTS.md instructed the agent to flag unrequested additions —
 check whether it did.
 
+**D5 · brief gap · read · fixed**
+Goal promised "no Python tracebacks" while Out of scope limited work to five
+cases. A file that exists but cannot be read raised an uncaught exception.
+Agent followed scope over goal, which was the defensible reading.
+Fix: added `except OSError` on open; narrowed the goal to file-access errors;
+put binary/non-UTF-8 files explicitly out of scope after confirming they raise
+`UnicodeDecodeError` in the read loop, which no `OSError` catch would reach.
+
 ### Brief 01 summary
 - Reprompts: 1
 - Defects: 4 — one model error, two spec gaps, one unrequested change
 - Caught by reading: 2 · by diff: 1 · with assistance: 1
 - AGENTS.md scope constraints respected: yes, apart from D4\
+
+### Brief 02 summary
+- Reprompts: 0
+- Defects: 1 — a spec gap; no model errors, no unrequested scope
+- Caught by reading: 1 · by diff: 0 · with assistance: 0
+- Single commit; no fixes-after-review commit needed
+- AGENTS.md gained two rules after Brief 01 (flag additions, ask don't default)
